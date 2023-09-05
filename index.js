@@ -10,7 +10,7 @@ let nivel = ""
 let continuar = "S"
 
 
-
+//loop para validar e continuar.
 while (continuar.toUpperCase() == "S") {
     let caracter = true
     while (caracter == true){
@@ -30,12 +30,13 @@ continuar = entradaDados ("              Deseja continuar? S/N ")
 
 
 
-// função de calcula o nivel
+// função de calcula saldo de vitorias
 function calculaSaldoVitorias (vitorias, derrotas){
     saldoVitorias = vitorias - derrotas
     return saldoVitorias
 }
 
+// função que verifica o nivel do herói
 function VerificaNivelHerio (saldoVitorias){
     if(saldoVitorias <= 10){
         nivel = "Ferro"
@@ -55,6 +56,7 @@ function VerificaNivelHerio (saldoVitorias){
 return nivel
 }
 
+// exibe o saldo e o nivel do herói
 function exibirRankeHeroi () {
 calculaSaldoVitorias(vitorias, derrotas)
 VerificaNivelHerio(saldoVitorias)
@@ -62,6 +64,7 @@ VerificaNivelHerio(saldoVitorias)
 console.log(`O Herói tem de saldo de ${saldoVitorias} está no nível de ${nivel}`)
 }
 
+// Separador
 function separador () {
     console.log("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 }
